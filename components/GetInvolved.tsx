@@ -20,7 +20,7 @@ export default function GetInvolved({ onOpenContact }: GetInvolvedProps) {
 
   return (
     <section className="ref" id="get-involved">
-      <div className="eyebrow">04 — Get Involved</div>
+      <div className="eyebrow">05 — Get Involved</div>
       <h2 className="ref-title">Join the Movement</h2>
 
       <div className="get-involved-grid">

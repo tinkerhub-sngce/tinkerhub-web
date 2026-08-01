@@ -14,7 +14,7 @@ interface CoreTeamProps {
 }
 
 export default function CoreTeam({
-  eyebrow = "02 — Leadership",
+  eyebrow = "04 — Leadership",
   title = "SNGCE Core Chapter Team",
   id = "team",
 }: CoreTeamProps) {
