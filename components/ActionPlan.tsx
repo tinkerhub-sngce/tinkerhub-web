@@ -2,6 +2,7 @@
 
 import React from "react";
 import actionPlanData from "@/data/actionPlan.json";
+import linksData from "@/data/links.json";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function ActionPlan() {
@@ -20,11 +21,17 @@ export default function ActionPlan() {
               <h3>{s.title}</h3>
               <p>{s.desc}</p>
               <div className="action-links">
-                {s.links.map((link, idx) => (
-                  <a key={idx} href={link.href} target={link.href.startsWith("http") ? "_blank" : "_self"} rel="noreferrer">
-                    {link.label}
-                  </a>
-                ))}
+                {s.links.map((link, idx) => {
+                  const href = "form" in link
+                    ? linksData.forms[link.form as keyof typeof linksData.forms]
+                    : link.href;
+
+                  return (
+                    <a key={idx} href={href} target={href.startsWith("http") ? "_blank" : "_self"} rel="noreferrer">
+                      {link.label}
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>

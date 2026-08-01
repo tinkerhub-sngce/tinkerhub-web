@@ -33,6 +33,7 @@ export default function NavOverlay({ isOpen, onClose, onOpenContact }: NavOverla
         <Link href="/study-jam" onClick={onClose} prefetch>Study Jams</Link>
         <Link href="/events" onClick={onClose} prefetch>Events</Link>
         <Link href="/spotlight" onClick={onClose} prefetch>Spotlight</Link>
+        <Link href="/success-stories" onClick={onClose} prefetch>Success Stories</Link>
         <Link href="/campus" onClick={onClose} prefetch>Campus Hub</Link>
         <Link href="/resources" onClick={onClose} prefetch>Resource Hub</Link>
       </nav>

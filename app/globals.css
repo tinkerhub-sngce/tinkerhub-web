@@ -1186,6 +1186,148 @@ footer span {
   flex-wrap: wrap;
 }
 
+.event-year-group + .event-year-group {
+  margin-top: 48px;
+}
+
+.event-year-group__header {
+  align-items: center;
+  border-bottom: 2px solid var(--ink);
+  display: flex;
+  gap: 14px;
+  margin-bottom: 8px;
+  padding-bottom: 10px;
+}
+
+.event-year-group__year {
+  font-family: var(--font-anton), sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.event-year-group__label {
+  color: var(--gray);
+  font-family: var(--font-special), cursive;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+/* ============================================================
+   SUCCESS STORIES
+   ============================================================ */
+
+.success-stories {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.success-stories__intro {
+  max-width: 660px;
+}
+
+.success-stories__intro > p {
+  color: var(--gray);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.success-stories__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.success-story-card {
+  background: #fff;
+  border: 2.5px solid var(--ink);
+  box-shadow: 7px 7px 0 var(--ink);
+  min-height: 330px;
+  padding: 24px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.success-story-card:nth-child(odd) { transform: rotate(-1deg); }
+.success-story-card:nth-child(even) { transform: rotate(1deg); }
+
+.success-story-card:hover {
+  transform: translate(-3px, -3px) rotate(0deg) !important;
+  box-shadow: 11px 11px 0 var(--story-accent);
+}
+
+.success-story-card::after {
+  background: var(--story-accent);
+  border: 2px solid var(--ink);
+  bottom: -12px;
+  content: "";
+  height: 22px;
+  position: absolute;
+  right: 22px;
+  transform: rotate(45deg);
+  width: 22px;
+}
+
+.success-story-card__topline {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.success-story-card__number {
+  background: var(--story-accent);
+  border: 1.5px solid var(--ink);
+  font-family: var(--font-pixel), monospace;
+  font-size: 0.75rem;
+  padding: 7px 9px;
+}
+
+.success-story-card__emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.success-story-card__category {
+  color: var(--pink-vivid);
+  font-family: var(--font-special), cursive;
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-top: 24px;
+  text-transform: uppercase;
+}
+
+.success-story-card h3 {
+  font-family: var(--font-anton), sans-serif;
+  font-size: 1.55rem;
+  line-height: 1.08;
+  margin-top: 7px;
+}
+
+.success-story-card__story {
+  color: var(--gray);
+  font-size: 0.89rem;
+  line-height: 1.55;
+  margin-top: 13px;
+}
+
+.success-story-card__highlight {
+  border-top: 2px dashed var(--ink);
+  font-family: var(--font-caveat), cursive;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 18px;
+  padding-top: 14px;
+}
+
+@media (max-width: 850px) {
+  .success-stories__grid { grid-template-columns: 1fr; }
+  .success-story-card { min-height: auto; }
+}
+
 /* ============================================================
    RESOURCE HUB
    ============================================================ */

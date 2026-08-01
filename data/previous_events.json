@@ -1,6 +1,7 @@
 [
   {
     "id": "event-1",
+    "year": 2026,
     "date": "MAR 11 • 9:30 AM",
     "title": "Robo Soccer",
     "location": "Offline • SNGCE",
@@ -11,6 +12,7 @@
   },
   {
     "id": "event-2",
+    "year": 2026,
     "date": "FEB 26 • 8:00 PM",
     "title": "Intro to Git and GitHub",
     "location": "Online",
@@ -21,6 +23,7 @@
   },
   {
     "id": "event-3",
+    "year": 2026,
     "date": "FEB 25 • 8:00 PM",
     "title": "Oru Project Breakdown Kadha",
     "location": "Online",
@@ -31,6 +34,7 @@
   },
   {
     "id": "event-4",
+    "year": 2026,
     "date": "FEB 20 • 9:00 AM",
     "title": "Tink-Her-Hack",
     "location": "Offline • SNGCE",
@@ -41,6 +45,7 @@
   },
   {
     "id": "event-5",
+    "year": 2026,
     "date": "FEB 11 • 8:00 PM",
     "title": "Inside the Hall",
     "location": "Online",
@@ -51,6 +56,7 @@
   },
   {
     "id": "event-6",
+    "year": 2026,
     "date": "JAN 10 • 7:00 PM",
     "title": "SCAN HERE – A Session on QR Logic",
     "location": "Online",
@@ -61,6 +67,7 @@
   },
   {
     "id": "event-7",
+    "year": 2026,
     "date": "JAN 06 • 8:00 PM",
     "title": "O-Penn Mic Edition-2",
     "location": "Online",
@@ -71,6 +78,7 @@
   },
   {
     "id": "event-8",
+    "year": 2025,
     "date": "DEC 22 • 7:00 PM",
     "title": "AI Development Bootcamp",
     "location": "Online",
@@ -81,6 +89,7 @@
   },
   {
     "id": "event-9",
+    "year": 2025,
     "date": "DEC 18 • 4:10 PM",
     "title": "Charcha #2",
     "location": "Offline • SNGCE",
@@ -91,6 +100,7 @@
   },
   {
     "id": "event-10",
+    "year": 2025,
     "date": "OCT 21 • 8:00 PM",
     "title": "O Pen Mic",
     "location": "Online",
@@ -101,6 +111,7 @@
   },
   {
     "id": "event-11",
+    "year": 2025,
     "date": "OCT 01 • 7:00 PM",
     "title": "HOW TO DESIGN!!",
     "location": "Online",
@@ -111,6 +122,7 @@
   },
   {
     "id": "event-12",
+    "year": 2025,
     "date": "SEP 01 • 7:00 PM",
     "title": "Onam Vibes Bootcamp",
     "location": "Online",
@@ -121,6 +133,7 @@
   },
   {
     "id": "event-13",
+    "year": 2025,
     "date": "AUG 01 • 3:45 PM",
     "title": "Chaayayum Samsaaravum",
     "location": "Offline • SNGCE",
@@ -131,6 +144,7 @@
   },
   {
     "id": "event-14",
+    "year": 2025,
     "date": "JUL 11 • 3:45 PM",
     "title": "Community Gathering",
     "location": "Offline • SNGCE",

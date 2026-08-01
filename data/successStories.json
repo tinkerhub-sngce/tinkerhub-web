@@ -1,0 +1,32 @@
+[
+  {
+    "id": "first-project",
+    "number": "01",
+    "category": "From curiosity to code",
+    "title": "The first project is the hardest — and the most important.",
+    "story": "A beginner-friendly study jam turned a blank repository into a working campus utility. The real win was learning that asking questions, sharing half-finished ideas, and shipping small are all part of building.",
+    "highlight": "Started with a hello world. Left with a team.",
+    "accent": "var(--lime)",
+    "emoji": "💻"
+  },
+  {
+    "id": "community-builder",
+    "number": "02",
+    "category": "People make the room",
+    "title": "One volunteer can make a whole community feel possible.",
+    "story": "By welcoming new faces and making room for every question, a student volunteer helped turn a regular meetup into a place where people return, contribute, and bring their friends along.",
+    "highlight": "Small invitations create big belonging.",
+    "accent": "var(--pink)",
+    "emoji": "🌱"
+  },
+  {
+    "id": "maker-mindset",
+    "number": "03",
+    "category": "Learn by making",
+    "title": "The best prototypes teach you what to try next.",
+    "story": "An experimental idea went through rough sketches, broken builds, and feedback from peers before becoming something worth showing. It is a reminder that progress rarely arrives polished.",
+    "highlight": "Build it messy. Make it better together.",
+    "accent": "var(--lavender)",
+    "emoji": "🚀"
+  }
+]

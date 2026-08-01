@@ -1,0 +1,104 @@
+{
+  "year": "2025",
+  "label": "Previous Core Team",
+  "eyebrow": "Team Archive",
+  "color": "#FFE816",
+  "members": [
+    {
+      "id": "previous-team-1",
+      "name": "Abhiram P",
+      "role": "Campus Lead",
+      "tag": "Former Campus Lead",
+      "dept": "Computer Science & Engineering",
+      "image": "/images/team2025/campus-lead.jpg",
+      "gradient": "linear-gradient(135deg, #FF4FD1, #800860)",
+      "bio": "Building tech, communities, and ideas that matter.",
+      "github": "https://github.com/ABHIRAM-CREATOR06/",
+      "linkedin": "https://www.linkedin.com/in/abhiram-p-3a1b49290/"
+    },
+    {
+      "id": "previous-team-2",
+      "name": "Geo Jose",
+      "role": "Learning Coordinator",
+      "tag": "Former Learning Coordinator",
+      "dept": "Computer Science & Engineering",
+      "image": "/images/team2025/learning-coordinator.jpg",
+      "gradient": "linear-gradient(135deg, #C6FF00, #384A00)",
+      "bio": "Designer by heart, developer by profession",
+      "github": "https://github.com/geojose911",
+      "linkedin": "https://www.linkedin.com/in/geo-jose-12022634a/"
+    },
+    {
+      "id": "previous-team-3",
+      "name": "Bismiya AA",
+      "role": "Women in Tech Lead",
+      "tag": "Former Women in Tech Lead",
+      "dept": "Computer Science & Engineering",
+      "image": "/images/team2025/women-in-tech-lead.jpg",
+      "gradient": "linear-gradient(135deg, #C9B8F5, #4A3A73)",
+      "bio": "Inclusive leader, shaping tech for the next generation.",
+      "github": "https://github.com/Bismi13iya",
+      "linkedin": "https://www.linkedin.com/in/bismiya-aa-69314534a/"
+    },
+    {
+      "id": "previous-team-4",
+      "name": "Leah Sarah Biju",
+      "role": "Outreach Lead",
+      "tag": "Former Outreach Lead",
+      "dept": "Computer Science & Engineering",
+      "image": "/images/team2025/outreach-lead.jpg",
+      "gradient": "linear-gradient(135deg, #FF7E5F, #FEB47B)",
+      "bio": "Cooriousityy alee ellam",
+      "github": "https://github.com",
+      "linkedin": "https://www.linkedin.com/in/leah-sarah-biju-992941343/"
+    },
+    {
+      "id": "previous-team-5",
+      "name": "Riza A",
+      "role": "First Year Coordinator",
+      "tag": "Former First Year Coordinator",
+      "dept": "Artificial Intelligence and Cybersecurity",
+      "image": "/images/team2025/first-year-coordinator.jpg",
+      "gradient": "linear-gradient(135deg, #FF7E5F, #FEB47B)",
+      "bio": "Crafted visual identities, zine aesthetics, and campus graphics.",
+      "github": "https://github.com",
+      "linkedin": "https://www.linkedin.com/in/riza-a-b62321369/"
+    },
+    {
+      "id": "previous-team-6",
+      "name": "Dawn Eldhose Raju",
+      "role": "Program Facilitator",
+      "tag": "Former Program Facilitator",
+      "dept": "Computer Science & Engineering",
+      "image": "/images/team2025/Program-Facilitator.jpg",
+      "gradient": "linear-gradient(135deg, #FF7E5F, #FEB47B)",
+      "bio": "I am me,thats all",
+      "github": "https://github.com/reDawner",
+      "linkedin": "https://www.linkedin.com/in/dawn-eldhos-raju-9b6711291/"
+    },
+    {
+      "id": "team-1",
+      "name": "Arya Venugopal A",
+      "role": "Community Lead",
+      "tag": "Former Community Lead",
+      "dept": "Electronics & Communication",
+      "image": "/images/team/campus-lead.jpg",
+      "gradient": "linear-gradient(135deg, #FF4FD1, #800860)",
+      "bio": "Passionate about building maker culture, and student communities.",
+      "github": "https://github.com/Arya111-droid",
+      "linkedin": "https://www.linkedin.com/in/arya-venugopal-a-913b43368/"
+    },
+    {
+      "id": "previous-team-7",
+      "name": "Arjun Krishna",
+      "role": "Documentation Lead",
+      "tag": "Former Documentation Lead",
+      "dept": "Computer Science & Engineering",
+      "image": "/images/team2025/documentation-lead.jpg",
+      "gradient": "linear-gradient(135deg, #FF7E5F, #FEB47B)",
+      "bio": "Dreamer by heart, believer by soul, achiever by action",
+      "github": "https://github.com/aujrn",
+      "linkedin": "https://www.linkedin.com/in/arjun-krishna-02a501382/"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ const routes = [
   "/campus",
   "/resources",
   "/spotlight",
+  "/success-stories",
   "/discord",
   "/whatsapp",
 ];

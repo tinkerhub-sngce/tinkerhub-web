@@ -31,7 +31,7 @@
     "title": "Learn & Lead",
     "desc": "Step up as a campus lead, mentor study jams, and organize campus technical events.",
     "links": [
-      { "label": "Become a Mentor ↗", "href": "#volunteer" }
+      { "label": "Become a Mentor ↗", "form": "mentorApplication" }
     ]
   },
   {
@@ -40,7 +40,7 @@
     "desc": "Demonstrate your innovations to industry leaders, win hackathons, and land career opportunities.",
     "links": [
       { "label": "Spotlight Wall ↗", "href": "/spotlight" },
-      { "label": "Success Stories ↗", "href": "#stories" }
+      { "label": "Success Stories ↗", "href": "/success-stories" }
     ]
   }
 ]

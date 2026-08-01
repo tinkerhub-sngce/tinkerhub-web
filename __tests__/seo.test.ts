@@ -63,6 +63,7 @@ describe.skip("SEO Configuration", () => {
         "/campus",
         "/resources",
         "/spotlight",
+        "/success-stories",
         "/discord",
         "/whatsapp",
       ];

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import whatsappData from "@/data/whatsapp.json";
 import discordData from "@/data/discord.json";
+import linksData from "@/data/links.json";
 
 interface GetInvolvedProps {
   onOpenContact: (reason: string) => void;
@@ -47,12 +48,8 @@ export default function GetInvolved({ onOpenContact }: GetInvolvedProps) {
           <h3>Volunteer &amp; Mentor</h3>
           <p>Share your technical expertise as a study jam mentor or campus event coordinator.</p>
           <a
-            href="#volunteer"
+            href={linksData.forms.mentorApplication}
             className="gi-link"
-            onClick={(e) => {
-              e.preventDefault();
-              onOpenContact("Volunteer / Mentor");
-            }}
           >
             Apply as Mentor ↗
           </a>
@@ -64,12 +61,8 @@ export default function GetInvolved({ onOpenContact }: GetInvolvedProps) {
           <h3>Start a Project</h3>
           <p>Have an idea for a campus project or study track? Lead a build crew with TinkerHub support.</p>
           <a
-            href="#project"
+            href={linksData.forms.projectShowcase}
             className="gi-link"
-            onClick={(e) => {
-              e.preventDefault();
-              onOpenContact("Start a Campus Project");
-            }}
           >
             Propose a Project ↗
           </a>

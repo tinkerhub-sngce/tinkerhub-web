@@ -6,8 +6,13 @@ import PageHeader from "@/components/PageHeader";
 import BackHomeLink from "@/components/BackHomeLink";
 import LocalImage from "@/components/LocalImage";
 import campusHubData from "@/data/campus_hub.json";
+import previousCoreTeamData from "@/data/previousCoreTeam.json";
 
-function MemberCard({ member, idx }: { member: (typeof campusHubData.categories)[number]["members"][number]; idx: number }) {
+type TeamMember =
+  | (typeof campusHubData.categories)[number]["members"][number]
+  | (typeof previousCoreTeamData.members)[number];
+
+function MemberCard({ member, idx }: { member: TeamMember; idx: number }) {
   return (
     <div
       className="spot-card"
@@ -126,6 +131,62 @@ function CampusTeamSection() {
           </div>
         </div>
       ))}
+
+      <div style={{ marginBottom: "60px" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "14px",
+            paddingTop: "48px",
+            borderTop: "2px solid var(--ink)",
+            marginBottom: "28px",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "var(--font-special)",
+              fontSize: "0.78rem",
+              fontWeight: "bold",
+              background: previousCoreTeamData.color,
+              padding: "4px 12px",
+              border: "1.5px solid var(--ink)",
+              borderRadius: "4px",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {previousCoreTeamData.year} ARCHIVE
+          </span>
+          <h2
+            style={{
+              fontFamily: "var(--font-anton)",
+              fontSize: "clamp(1.4rem, 3vw, 2rem)",
+              margin: 0,
+              textTransform: "uppercase",
+              letterSpacing: "0.01em",
+            }}
+          >
+            {previousCoreTeamData.label}
+          </h2>
+          <span
+            style={{
+              fontFamily: "var(--font-special)",
+              fontSize: "0.75rem",
+              color: "var(--gray)",
+              marginLeft: "auto",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {previousCoreTeamData.members.length} members
+          </span>
+        </div>
+
+        <div className="core-team-grid">
+          {previousCoreTeamData.members.map((member, idx) => (
+            <MemberCard key={member.id} member={member} idx={idx} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

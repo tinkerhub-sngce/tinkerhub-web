@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.jpg",
     apple: "/apple-touch-icon.png",
   },
   viewport: "width=device-width, initial-scale=1, maximum-scale=5",
