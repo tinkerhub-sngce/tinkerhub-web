@@ -64,39 +64,15 @@
       "members": [
         {
           "id": "tech-1",
-          "name": "Rahul Krishnan",
-          "role": "Full Stack Developer",
-          "tag": "WEB TECH",
-          "dept": "Computer Science & Engineering",
+          "name": "Sanjay Sajeev",
+          "role": "Technical Lead",
+          "tag": "Hardware",
+          "dept": "Electronics & Communication",
           "image": "/images/team/fullstack-developer.jpg",
           "gradient": "linear-gradient(135deg, #C6FF00, #2E4B00)",
-          "bio": "Building open-source campus tools with Next.js and TypeScript.",
-          "github": "https://github.com",
-          "linkedin": "https://linkedin.com"
-        },
-        {
-          "id": "tech-2",
-          "name": "Sreehari Nandanan",
-          "role": "Embedded Systems",
-          "tag": "HARDWARE",
-          "dept": "Electronics & Communication",
-          "image": "/images/team/embedded-systems-lead.jpg",
-          "gradient": "linear-gradient(135deg, #FF4FD1, #61184F)",
-          "bio": "ESP32 & Arduino enthusiast. Building IoT prototypes for campus automation.",
-          "github": "https://github.com",
-          "linkedin": "https://linkedin.com"
-        },
-        {
-          "id": "tech-3",
-          "name": "Arun Prakash",
-          "role": "AI/ML Researcher",
-          "tag": "AI TRACK",
-          "dept": "Computer Science & Engineering",
-          "image": "/images/team/aiml-lead.jpg",
-          "gradient": "linear-gradient(135deg, #C9B8F5, #4A3A73)",
-          "bio": "Exploring LLMs, PyTorch, and practical AI deployments for student projects.",
-          "github": "https://github.com",
-          "linkedin": "https://linkedin.com"
+          "bio": "Prespective differs and Perspective Matters",
+          "github": "https://github.com/sanjayingithub",
+          "linkedin": "https://www.linkedin.com/in/sanjay-sajeev-940571249/"
         }
       ]
     },
@@ -108,35 +84,35 @@
       "members": [
         {
           "id": "com-1",
-          "name": "Divya Rajan",
-          "role": "Community Manager",
+          "name": "Akshaya Biju",
+          "role": "Community Lead",
           "tag": "COMMUNITY",
           "dept": "Computer Science & Engineering",
           "image": "/images/team/community-manager.jpg",
           "gradient": "linear-gradient(135deg, #C9B8F5, #9B70D8)",
-          "bio": "Connecting makers, organising peer meetups, and growing the campus TinkerHub network.",
+          "bio": "Learning,Growing,Building",
           "github": "https://github.com",
           "linkedin": "https://linkedin.com"
         },
         {
           "id": "com-2",
-          "name": "Jithin Thomas",
-          "role": "Events Coordinator",
+          "name": "Arjun Krishna",
+          "role": "Documentation Lead",
           "tag": "EVENTS",
-          "dept": "Mechanical Engineering",
-          "image": "/images/team/events-coordinator.jpg",
+          "dept": "Computer Science & Engineering",
+          "image": "/images/team/documentation-lead.jpg",
           "gradient": "linear-gradient(135deg, #FF7E5F, #FEB47B)",
-          "bio": "Planning and executing campus hackathons, workshops, and study jam sessions.",
-          "github": "https://github.com",
-          "linkedin": "https://linkedin.com"
+          "bio": "Dreamer by heart, believer by soul, achiever by action",
+          "github": "https://github.com/aujrn",
+          "linkedin": "https://www.linkedin.com/in/arjun-krishna-02a501382/"
         },
         {
           "id": "com-3",
-          "name": "Nandana Suresh",
-          "role": "Social Media Lead",
+          "name": "Fathima Suhana EB",
+          "role": "Community & Program Facilitator",
           "tag": "OUTREACH",
           "dept": "Computer Science & Engineering",
-          "image": "/images/team/social-media-lead.jpg",
+          "image": "/images/team/community-facilitator.jpg",
           "gradient": "linear-gradient(135deg, #FF4FD1, #800860)",
           "bio": "Managing TinkerHub SNGCE's social presence and amplifying student maker stories.",
           "github": "https://github.com",
@@ -146,21 +122,21 @@
     },
     {
       "id": "creative",
-      "label": "Creative Team",
-      "eyebrow": "Design & Brand",
+      "label": "Creative and Media Team",
+      "eyebrow": "Design Coordinator",
       "color": "#FFD166",
       "members": [
         {
           "id": "cre-1",
-          "name": "Sreelakshmi K",
-          "role": "UI/UX Designer",
+          "name": "Sreelakshmi",
+          "role": "Creative Designer",
           "tag": "DESIGN",
-          "dept": "Computer Science & Engineering",
-          "image": "/images/team/ui-ux-designer.jpg",
+          "dept": "Electronics & Communication",
+          "image": "/images/team/creative-designer.jpg",
           "gradient": "linear-gradient(135deg, #FFD166, #a05f00)",
-          "bio": "Designing zine-style interfaces and user experiences for campus tech projects.",
+          "bio": "Learning, Building",
           "github": "https://github.com",
-          "linkedin": "https://linkedin.com"
+          "linkedin": "https://www.linkedin.com/in/akshayabiju/"
         },
         {
           "id": "cre-2",
