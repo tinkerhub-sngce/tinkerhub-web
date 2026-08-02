@@ -1251,6 +1251,22 @@ footer span {
 }
 
 @media (max-width: 560px) {
+  section.ref {
+    padding: 52px 20px;
+  }
+
+  .page-header {
+    padding: 28px 20px 22px;
+  }
+
+  .page-header .index-pill {
+    margin-bottom: 16px;
+  }
+
+  .page-header .desc {
+    margin-top: 16px;
+  }
+
   .hero {
     padding: 18px 24px 52px;
   }
@@ -1274,13 +1290,114 @@ footer span {
     font-size: 0.72rem;
   }
 
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    margin: 22px 0 18px !important;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .events-section__heading {
+    align-items: stretch !important;
+  }
+
+  .event-filter-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    border-radius: 16px !important;
+    gap: 6px !important;
+  }
+
+  .event-filter-tab {
+    justify-content: center;
+    min-width: 0;
+    padding: 9px 8px !important;
+  }
+
+  .event-filter-tab span:first-child {
+    font-size: 0.73rem;
+  }
+
+  .pillars-grid,
+  .events-grid,
+  .core-team-grid,
+  .get-involved-grid,
+  .resource-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .pillar-card,
+  .event-card,
+  .gi-card,
+  .resource-card,
+  .success-story-card {
+    padding: 18px;
+  }
+
   .action-content {
     min-width: 0;
+  }
+
+  .action-row {
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .action-links {
+    gap: 10px 14px;
   }
 
   .spot-card {
     align-items: flex-start;
     padding: 18px;
+  }
+
+  .resource-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .resource-tab {
+    justify-content: center;
+    min-width: 0;
+    padding: 10px 8px;
+  }
+
+  .success-stories__grid {
+    gap: 22px;
+    margin-top: 28px;
+  }
+
+  .event-year-group__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .page-actions {
+    align-items: stretch;
+    flex-direction: column;
+    margin-top: 38px;
+    padding: 0 20px;
+  }
+
+  .page-actions .btn {
+    width: 100%;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .modal-actions .btn,
+  .modal-actions button {
+    width: 100%;
   }
 }
 

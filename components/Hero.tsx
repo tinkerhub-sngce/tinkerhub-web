@@ -2,18 +2,25 @@
 
 import React from "react";
 import Link from "next/link";
+import spotlightsData from "@/data/spotlights.json";
 import { usePageShell } from "./PageShell";
 import LocalImage from "./LocalImage";
 
+const makerOfTheMonth = spotlightsData.find(
+  (spotlight) => spotlight.tag.toLowerCase() === "maker of the month"
+);
+
 const POLAROIDS = [
-  {
-    position: "card-1" as const,
-    label: "Maker of the Month",
-    by: "Sreehari Nandanan",
-    src: "/images/hero/maker-of-month.jpg",
-    gradient: "linear-gradient(135deg, #FF4FD1, #61184F)",
-    emoji: "🛠️",
-  },
+  ...(makerOfTheMonth
+    ? [{
+        position: "card-1" as const,
+        label: makerOfTheMonth.tag,
+        by: makerOfTheMonth.name,
+        src: makerOfTheMonth.image,
+        gradient: makerOfTheMonth.gradient ?? makerOfTheMonth.bg,
+        emoji: makerOfTheMonth.emoji,
+      }]
+    : []),
   {
     position: "card-2" as const,
     label: "Campus Chapter",
@@ -21,7 +28,7 @@ const POLAROIDS = [
     src: "/images/hero/campus.jpg",
     gradient: "linear-gradient(135deg, #C6FF00, #2E4B00)",
     emoji: "🏫",
-    rounded: true,
+    rounded: true as const,
   },
 ];
 
@@ -53,7 +60,7 @@ export default function Hero() {
         TinkerHub SNGCE is a vibrant student maker community at SNG College of Engineering — empowering students with hands-on skills, study jams, open source culture, and peer-to-peer learning.
       </p>
 
-      <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap", margin: "24px 0 20px" }}>
+      <div className="hero-actions" style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap", margin: "24px 0 20px" }}>
         <Link className="btn btn--solid btn--lg" href="/study-jam">Study Jams ⚡</Link>
         <Link className="btn btn--outline btn--lg" href="/events">Explore Events ↗</Link>
         <Link className="btn btn--outline btn--lg" href="/resources">Resource Hub 📚</Link>

@@ -170,17 +170,18 @@ export default function EventsSection() {
     <section className="ref reveal" id="events" ref={sectionRef}>
       <div className="eyebrow">03 — What&apos;s Next &amp; Current</div>
 
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px", marginTop: "6px" }}>
+      <div className="events-section__heading" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px", marginTop: "6px" }}>
         <h2 className="ref-title" style={{ marginTop: 0 }}>Campus Activities &amp; Events</h2>
 
         {/* TAB FILTER CONTROLS */}
-        <div style={{ display: "inline-flex", gap: "8px", background: "#f4f4f4", padding: "6px", borderRadius: "999px", border: "2px solid var(--ink)", flexWrap: "wrap" }}>
+        <div className="event-filter-tabs" style={{ display: "inline-flex", gap: "8px", background: "#f4f4f4", padding: "6px", borderRadius: "999px", border: "2px solid var(--ink)", flexWrap: "wrap" }}>
           {filterButtons.map(({ key, label, count, activeBg, activeColor }) => {
             const isSelected = filter === key;
             return (
               <button
                 key={key}
                 type="button"
+                className="event-filter-tab"
                 onClick={() => setFilter(key)}
                 aria-pressed={isSelected}
                 style={{
