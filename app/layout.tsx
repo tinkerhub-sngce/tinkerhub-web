@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { Press_Start_2P, Anton, Playfair_Display, Special_Elite, Caveat, Poppins, Instrument_Serif } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Pixelify_Sans, Anton, Playfair_Display, Special_Elite, Caveat, Poppins, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
-const pressStart2P = Press_Start_2P({
-  weight: "400",
+const pixelifySans = Pixelify_Sans({
+  weight: ["600", "700"],
   subsets: ["latin"],
   variable: "--font-pixel",
 });
@@ -98,10 +98,15 @@ export const metadata: Metadata = {
     icon: "/icon.jpg",
     apple: "/apple-touch-icon.png",
   },
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
@@ -110,7 +115,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${pressStart2P.variable} ${anton.variable} ${playfairDisplay.variable} ${specialElite.variable} ${caveat.variable} ${poppins.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={`${pixelifySans.variable} ${anton.variable} ${playfairDisplay.variable} ${specialElite.variable} ${caveat.variable} ${poppins.variable} ${instrumentSerif.variable}`}>
       <head>
         <meta charSet="utf-8" />
         <meta name="language" content="English" />

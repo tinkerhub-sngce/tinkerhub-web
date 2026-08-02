@@ -1,18 +1,47 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageShell from "@/components/PageShell";
 import PageHeader from "@/components/PageHeader";
 import BackHomeLink from "@/components/BackHomeLink";
 import Marquee from "@/components/Marquee";
-import studyJamsData from "@/data/studyJams.json";
+import EmptyState from "@/components/EmptyState";
 import { usePageShell } from "@/components/PageShell";
+
+interface StudyJamTrack {
+  id: string;
+  title: string;
+  duration: string;
+  desc: string;
+  level: string;
+  status: string;
+}
 
 function StudyJamTracks() {
   const { openContact } = usePageShell();
+  const [tracks, setTracks] = useState<StudyJamTrack[] | null>(null);
+
+  useEffect(() => {
+    fetch("/api/study-jams")
+      .then((response) => (response.ok ? response.json() : []))
+      .then((data: unknown) => setTracks(Array.isArray(data) ? data : []))
+      .catch(() => setTracks([]));
+  }, []);
+
+  if (tracks !== null && tracks.length === 0) {
+    return (
+      <EmptyState
+        title="No study jams right now."
+        description="New learning tracks will appear here when registrations open."
+      />
+    );
+  }
+
+  if (tracks === null) return null;
+
   return (
     <div className="pillars-grid" style={{ marginTop: "40px" }}>
-      {studyJamsData.map((t) => (
+      {tracks.map((t) => (
         <div className="pillar-card" key={t.id}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <div className="pillar-num">[{t.duration}]</div>

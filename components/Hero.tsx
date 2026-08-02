@@ -53,20 +53,11 @@ export default function Hero() {
         TinkerHub SNGCE is a vibrant student maker community at SNG College of Engineering — empowering students with hands-on skills, study jams, open source culture, and peer-to-peer learning.
       </p>
 
-      {/* Hero Quick Actions */}
       <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap", margin: "24px 0 20px" }}>
-        <Link href="/study-jam" className="btn btn--solid btn--lg">
-          Study Jams ⚡
-        </Link>
-        <Link href="/events" className="btn btn--outline btn--lg">
-          Explore Events ↗
-        </Link>
-        <Link href="/resources" className="btn btn--outline btn--lg">
-          Resource Hub 📚
-        </Link>
-        <Link href="/whatsapp" className="btn btn--outline btn--lg" style={{ borderColor: "#25D366", color: "#1a8c4e" }}>
-          Join WhatsApp 💬
-        </Link>
+        <Link className="btn btn--solid btn--lg" href="/study-jam">Study Jams ⚡</Link>
+        <Link className="btn btn--outline btn--lg" href="/events">Explore Events ↗</Link>
+        <Link className="btn btn--outline btn--lg" href="/resources">Resource Hub 📚</Link>
+        <Link className="btn btn--outline btn--lg" style={{ borderColor: "#25D366", color: "#1a8c4e" }} href="/whatsapp">Join WhatsApp 💬</Link>
       </div>
 
       <p className="fine">
@@ -87,7 +78,7 @@ export default function Hero() {
               className="photo-circle"
               style={p.rounded ? { borderRadius: "6px" } : undefined}
             />
-            <div className="cap" style={p.rounded ? { fontSize: "0.95rem" } : undefined}>
+            <div className="cap">
               {p.label}
             </div>
             <div className="by">{p.by}</div>

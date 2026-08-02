@@ -30,7 +30,7 @@ function HomeBody() {
 
       <Spotlight />
 
-      <EventsSection onRegister={(eventName) => openContact(`Registration: ${eventName}`)} />
+      <EventsSection />
 
       <CoreTeam />
 

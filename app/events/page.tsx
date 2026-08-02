@@ -5,15 +5,11 @@ import PageShell from "@/components/PageShell";
 import PageHeader from "@/components/PageHeader";
 import BackHomeLink from "@/components/BackHomeLink";
 import EventsSection from "@/components/EventsSection";
-import { usePageShell } from "@/components/PageShell";
 
 function EventsBody() {
-  const { openContact } = usePageShell();
   return (
     <>
-      <EventsSection
-        onRegister={(eventName) => openContact(`Registration: ${eventName}`)}
-      />
+      <EventsSection />
       <div className="page-actions" style={{ marginBottom: "60px" }}>
         <BackHomeLink />
       </div>

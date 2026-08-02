@@ -87,54 +87,59 @@ a {
   }
 }
 
-.reveal {
-  opacity: 0;
-  transition: opacity 0.1s;
+/* SCROLL REVEAL ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatDot {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(12deg); }
+}
+
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.04); }
+}
+
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  opacity: 1 !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
 }
 
 .reveal.visible {
-  animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.reveal-left {
-  opacity: 0;
-  transition: opacity 0.1s;
+/* Floating decor dots animation */
+.dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  animation: floatDot 4s ease-in-out infinite;
+}
+.dot.pink { background: var(--pink); animation-delay: 0s; }
+.dot.lav { background: var(--lavender); animation-delay: 2s; }
+
+/* Pulse animation for active badges */
+.badge-pulse {
+  animation: badgePulse 2s ease-in-out infinite;
 }
 
-.reveal-left.visible {
-  animation: fadeInLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.reveal-right {
-  opacity: 0;
-  transition: opacity 0.1s;
-}
-
-.reveal-right.visible {
-  animation: fadeInRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.reveal-scale {
-  opacity: 0;
-  transition: opacity 0.1s;
-}
-
-.reveal-scale.visible {
-  animation: scaleIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-/* Staggered children delays */
-.stagger-children.visible > *:nth-child(1) { animation-delay: 0ms; }
-.stagger-children.visible > *:nth-child(2) { animation-delay: 100ms; }
-.stagger-children.visible > *:nth-child(3) { animation-delay: 200ms; }
-.stagger-children.visible > *:nth-child(4) { animation-delay: 300ms; }
-.stagger-children.visible > *:nth-child(5) { animation-delay: 400ms; }
-.stagger-children.visible > *:nth-child(6) { animation-delay: 500ms; }
-
-/* dot grid texture */
-.dotgrid {
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.14) 1px, transparent 1px);
-  background-size: 26px 26px;
+/* Pause marquee on hover */
+.marquee-wrap:hover .marquee {
+  animation-play-state: paused;
 }
 
 /* MARQUEE */
@@ -144,7 +149,7 @@ a {
   border-bottom: 3px solid var(--ink);
   overflow: hidden;
   transform: rotate(-1.4deg);
-  margin: 0 -20px 40px -20px;
+  margin: 0 -20px 10px -20px;
   position: relative;
   z-index: 5;
 }
@@ -220,8 +225,9 @@ a {
 
 .pixel-headline {
   font-family: var(--font-pixel), monospace;
+  font-weight: 700;
   font-size: clamp(2.2rem, 8vw, 5.8rem);
-  line-height: 1.35;
+  line-height: 1.25;
   display: inline-block;
   position: relative;
 }
@@ -241,14 +247,16 @@ a {
 .hero p.desc {
   max-width: 640px;
   margin: 36px auto 18px;
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #333;
 }
 
 .hero p.fine {
-  font-size: 0.78rem;
-  color: var(--gray);
+  font-size: 0.82rem;
+  color: #777;
+  letter-spacing: 0.02em;
 }
 
 /* POLAROID DECOR CARDS */
@@ -310,7 +318,7 @@ a {
 .card .cap {
   font-family: var(--font-caveat), cursive;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   text-align: center;
   margin-top: 8px;
   line-height: 1.2;
@@ -318,15 +326,16 @@ a {
 
 .card .by {
   text-align: center;
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 0.05em;
   color: var(--gray);
   text-transform: uppercase;
-  margin-top: 2px;
+  margin-top: 4px;
+  font-weight: 600;
 }
 
 .card-1 { top: 60px; right: 2vw; transform: rotate(9deg); }
-.card-2 { bottom: 20px; left: 1vw; transform: rotate(-7deg); width: 140px; }
+.card-2 { top: 60px; left: 2vw; transform: rotate(-7deg); width: 150px; }
 
 .dot {
   position: absolute;
@@ -337,7 +346,7 @@ a {
 .dot.pink { background: var(--pink); }
 .dot.lav { background: var(--lavender); }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .decor { display: none; }
 }
 
@@ -1184,6 +1193,132 @@ footer span {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+/* Home hero: oversized editorial composition with pinned side polaroids. */
+.hero {
+  padding-top: 14px;
+  padding-bottom: 60px;
+}
+
+.hero .index-pill {
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 var(--lime);
+  margin-bottom: 18px;
+  padding: 10px 40px;
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.hero .h-sub {
+  font-size: clamp(1.1rem, 1.8vw, 1.8rem);
+  margin-bottom: 0;
+}
+
+.hero .pixel-headline {
+  font-size: clamp(5rem, 10vw, 12rem);
+  line-height: 0.98;
+}
+
+.hero p.desc {
+  max-width: 980px;
+  font-size: clamp(1.08rem, 1.35vw, 1.65rem);
+  margin-top: 30px;
+}
+
+.hero p.fine {
+  font-size: clamp(0.78rem, 0.9vw, 1rem);
+  margin-top: 24px;
+}
+
+.hero .card {
+  width: 245px;
+  padding: 12px 12px 18px;
+}
+
+.hero .card-2 {
+  width: 220px;
+}
+
+@media (max-width: 900px) {
+  .hero .pixel-headline {
+    font-size: clamp(3.2rem, 12vw, 5.6rem);
+  }
+
+  .hero .h-sub {
+    font-size: clamp(1.5rem, 6vw, 2.3rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding: 18px 24px 52px;
+  }
+
+  .hero .h-sub {
+    font-size: clamp(1.15rem, 6vw, 1.45rem);
+    line-height: 1.2;
+  }
+
+  .hero .pixel-headline {
+    font-size: clamp(3.5rem, 16vw, 4.25rem);
+  }
+
+  .hero p.desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 24px;
+  }
+
+  .hero p.fine {
+    font-size: 0.72rem;
+  }
+
+  .action-content {
+    min-width: 0;
+  }
+
+  .spot-card {
+    align-items: flex-start;
+    padding: 18px;
+  }
+}
+
+.empty-state {
+  background: var(--ink);
+  border: 2.5px solid var(--ink);
+  box-shadow: 7px 7px 0 var(--lavender);
+  margin: 40px auto 0;
+  max-width: 720px;
+  overflow: hidden;
+  position: relative;
+}
+
+.empty-state img {
+  display: block;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.empty-state__copy {
+  background: var(--ink);
+  color: #fff;
+  padding: 18px 22px 22px;
+}
+
+.empty-state__copy h3 {
+  color: var(--lime);
+  font-family: var(--font-anton), sans-serif;
+  font-size: 1.5rem;
+}
+
+.empty-state__copy p {
+  color: #eee;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 4px;
 }
 
 .event-year-group + .event-year-group {

@@ -1,46 +1,13 @@
 [
   {
     "id": "event-1",
-    "status": "current",
-    "statusBadge": "🔴 ACTIVE NOW",
-    "date": "AUG 05 • 4:00 PM",
-    "title": "Next.js & Modern Web Study Jam",
-    "location": "CS Lab 2 • SNGCE",
-    "desc": "Hands-on build session building modern zine-style web applications with React and Next.js.",
-    "category": "Study Jam",
-    "registrationUrl": "#register"
-  },
-  {
-    "id": "event-2",
-    "status": "current",
-    "statusBadge": "⚡ LIVE JAM",
-    "date": "AUG 10 • 3:30 PM",
-    "title": "Git & Open Source Cohort",
-    "location": "Seminar Hall • SNGCE",
-    "desc": "Step-by-step masterclass on Git branching, pull requests, and contributing to open-source campus repos.",
-    "category": "Workshop",
-    "registrationUrl": "#register"
-  },
-  {
-    "id": "event-3",
-    "status": "upcoming",
-    "statusBadge": "📅 UPCOMING",
-    "date": "AUG 15 • 9:00 AM",
-    "title": "TinkerHack 2026: Campus Edition",
-    "location": "Main Auditorium",
-    "desc": "24-hour campus hackathon to prototype real-world solutions for campus and local problems.",
-    "category": "Hackathon",
-    "registrationUrl": "#register"
-  },
-  {
-    "id": "event-4",
-    "status": "upcoming",
-    "statusBadge": "📅 UPCOMING",
-    "date": "AUG 22 • 2:00 PM",
-    "title": "Embedded Microcontroller Workshop",
-    "location": "ECE Hardware Lab",
-    "desc": "Teardown sensors, program ESP32 microcontrollers, and build custom IoT hardware prototypes.",
-    "category": "Hardware",
-    "registrationUrl": "#register"
+    "status": "Upcoming",
+    "statusBadge": "📅 Upcoming Event",
+    "date": "AUG 07 • 1:20 PM",
+    "title": "Adicch Keri Vaa",
+    "location": "SNGCAST room• SNGCE",
+    "desc": "Just a normal Community Meetup",
+    "category": "Community Building",
+    "registrationUrl": "https://tinkerhub.org/events/QF6F2DCOGJ/adich-keri-va"
   }
 ]

@@ -110,7 +110,7 @@
           "id": "com-3",
           "name": "Fathima Suhana EB",
           "role": "Community & Program Facilitator",
-          "tag": "OUTREACH",
+          "tag": "COMMUNITY",
           "dept": "Computer Science & Engineering",
           "image": "/images/team/community-facilitator.jpg",
           "gradient": "linear-gradient(135deg, #FF4FD1, #800860)",
@@ -123,7 +123,7 @@
     {
       "id": "creative",
       "label": "Creative and Media Team",
-      "eyebrow": "Design Coordinator",
+      "eyebrow": "Design and Media Coordinator",
       "color": "#FFD166",
       "members": [
         {
@@ -140,15 +140,39 @@
         },
         {
           "id": "cre-2",
-          "name": "Muhammed Fariz",
-          "role": "Graphic Designer",
-          "tag": "VISUALS",
+          "name": "Aadi Krishna",
+          "role": "Creative Designer",
+          "tag": "DESIGN",
           "dept": "Mechanical Engineering",
           "image": "/images/team/graphic-designer.jpg",
           "gradient": "linear-gradient(135deg, #C6FF00, #2E4B00)",
           "bio": "Creating posters, event branding, and visual storytelling for campus maker events.",
           "github": "https://github.com",
-          "linkedin": "https://linkedin.com"
+          "linkedin": "https://in.linkedin.com/in/aadi-krishna07"
+        },
+        {
+          "id": "cre-3",
+          "name": "Aadityan Unikrishnan",
+          "role": "Media Coordinator",
+          "tag": "Media",
+          "dept": "MCA",
+          "image": "/images/team/graphic-designer.jpg",
+          "gradient": "linear-gradient(135deg, #C6FF00, #2E4B00)",
+          "bio": "Creating posters, event branding, and visual storytelling for campus maker events.",
+          "github": "https://github.com",
+          "linkedin": "https://www.linkedin.com/in/aadithyanunnikrishnan/"
+        },
+        {
+          "id": "cre-4",
+          "name": "Ann Merin Jose",
+          "role": "Media Coordinator",
+          "tag": "Media",
+          "dept": "Electrical and Electronics Engineering",
+          "image": "/images/team/graphic-designer.jpg",
+          "gradient": "linear-gradient(135deg, #C6FF00, #2E4B00)",
+          "bio": "Creating posters, event branding, and visual storytelling for campus maker events.",
+          "github": "https://github.com",
+          "linkedin": "https://www.linkedin.com/in/ann-merin-jose-12904a33b/"
         }
       ]
     }
