@@ -68,7 +68,7 @@
           "role": "Technical Lead",
           "tag": "Hardware",
           "dept": "Electronics & Communication",
-          "image": "/images/team/fullstack-developer.jpg",
+          "image": "/images/team/tech.jpg",
           "gradient": "linear-gradient(135deg, #C6FF00, #2E4B00)",
           "bio": "Prespective differs and Perspective Matters",
           "github": "https://github.com/sanjayingithub",
@@ -110,7 +110,7 @@
           "id": "com-3",
           "name": "Fathima Suhana EB",
           "role": "Community & Program Facilitator",
-          "tag": "COMMUNITY",
+          "tag": "OPERATIONS",
           "dept": "Computer Science & Engineering",
           "image": "/images/team/community-facilitator.jpg",
           "gradient": "linear-gradient(135deg, #FF4FD1, #800860)",
@@ -123,7 +123,7 @@
     {
       "id": "creative",
       "label": "Creative and Media Team",
-      "eyebrow": "Design and Media Coordinator",
+      "eyebrow": "MARKETING",
       "color": "#FFD166",
       "members": [
         {
@@ -144,7 +144,7 @@
           "role": "Creative Designer",
           "tag": "DESIGN",
           "dept": "Mechanical Engineering",
-          "image": "/images/team/graphic-designer.jpg",
+          "image": "/images/team/designer2.jpg",
           "gradient": "linear-gradient(135deg, #C6FF00, #2E4B00)",
           "bio": "Creating posters, event branding, and visual storytelling for campus maker events.",
           "github": "https://github.com",
@@ -156,7 +156,7 @@
           "role": "Media Coordinator",
           "tag": "Media",
           "dept": "MCA",
-          "image": "/images/team/graphic-designer.jpg",
+          "image": "/images/team/media1.jpg",
           "gradient": "linear-gradient(135deg, #C6FF00, #2E4B00)",
           "bio": "Creating posters, event branding, and visual storytelling for campus maker events.",
           "github": "https://github.com",
@@ -168,9 +168,9 @@
           "role": "Media Coordinator",
           "tag": "Media",
           "dept": "Electrical and Electronics Engineering",
-          "image": "/images/team/graphic-designer.jpg",
+          "image": "/images/team/media2.jpg",
           "gradient": "linear-gradient(135deg, #C6FF00, #2E4B00)",
-          "bio": "Creating posters, event branding, and visual storytelling for campus maker events.",
+          "bio": "BTech EEE student |SNGCE ",
           "github": "https://github.com",
           "linkedin": "https://www.linkedin.com/in/ann-merin-jose-12904a33b/"
         }
