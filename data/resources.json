@@ -45,6 +45,13 @@
         "url": "https://docs.github.com/en",
         "desc": "Official GitHub documentation covering Git basics, Actions, and open-source contribution guides.",
         "tag": "Docs • Version Control"
+      },
+      {
+        "id": "cs-7",
+        "title": "Rust-lang — rust-by-example",
+        "url": "https://github.com/rust-lang/rust-by-example",
+        "desc": "Learn Rust with examples (Live code editor included)",
+        "tag": "Github • Learning"
       }
     ]
   },
@@ -129,6 +136,34 @@
         "url": "https://www.kaggle.com/learn",
         "desc": "Free ML micro-courses and live competitions to build hands-on data science skills.",
         "tag": "Free • Competitions"
+      },
+      {
+        "id": "ai-5",
+        "title": "Microsoft - Artificial Intelligence for Beginners - A Curriculum",
+        "url": "https://github.com/microsoft/AI-For-Beginners",
+        "desc": "Explore the world of Artificial Intelligence (AI) with our 12-week, 24-lesson curriculum! It includes practical lessons, quizzes, and labs.",
+        "tag": "Free • Github"
+      },
+      {
+        "id": "ai-6",
+        "title": "Wolfram Alpha",
+        "url": "https://www.wolframalpha.com/",
+        "desc": "Compute expert-level answers using Wolfram’s breakthrough algorithms, knowledgebase and AI technology",
+        "tag": "Free • Simulation"
+      },
+      {
+        "id": "ai-7",
+        "title": "HarvardX: CS50's Introduction to Artificial Intelligence with Python",
+        "url": "https://www.edx.org/learn/artificial-intelligence/harvard-university-cs50-s-introduction-to-artificial-intelligence-with-python",
+        "desc": "Learn to use machine learning in Python in this introductory course on artificial intelligence.",
+        "tag": "Free • Certification"
+      },
+      {
+        "id": "ai-8",
+        "title": "Databricks - Training and Certification",
+        "url": "https://www.databricks.com/learn/training/home",
+        "desc": "Build a strong data and AI foundation with Databricks training and certification to demonstrate your competence and accelerate your career",
+        "tag": "Free • Certification"
       }
     ]
   }
