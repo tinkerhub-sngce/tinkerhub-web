@@ -1,151 +1,228 @@
-# TinkerHub SNGCE Website — Maintainer Handover
+# TinkerHub SNGCE Website — Maintainer Handover Guide
 
-This is a Next.js 15 + React + TypeScript website. Content is intentionally data-driven: update JSON files in `data/` instead of editing page components for routine content changes.
+*A plain-language guide for whoever takes over this project next.*
 
-## Commands
+Repository: https://github.com/tinkerhub-sngce/tinkerhub-web
+Live site: https://tinkerhub-web.vercel.app
 
-```bash
-# Install dependencies
+---
+
+## 1. What is this project, in simple words?
+
+This is the official website for the **TinkerHub SNGCE chapter** — the campus maker/tech community at Sree Narayana Gurukulam College of Engineering.
+
+The site tells people:
+- What TinkerHub SNGCE is and what it stands for
+- What events are coming up (and what happened in past events)
+- What "Study Jams" (peer learning groups) are running right now
+- Useful learning resources (guides, roadmaps, tools)
+- Cool projects made by students ("Spotlight")
+- Who is on the core team
+- How to join the WhatsApp / Discord community
+
+You do **not** need to be a design expert or a senior developer to maintain this site. Most day-to-day updates (adding an event, updating the team list, etc.) just mean editing simple text files — no real coding required. This guide explains everything step by step.
+
+---
+
+## 2. What is this website built with?
+
+Think of it like this — the site has two layers:
+
+| Layer | What it does | In simple terms |
+|---|---|---|
+| **Next.js + React + TypeScript** | The actual code that builds the pages | This is the "engine" of the site. You'll rarely need to touch this for routine updates. |
+| **JSON data files** (inside the `data/` folder) | The actual content — events, team names, resources, etc. | This is the "content" of the site. This is what you'll edit 90% of the time. |
+
+This separation is intentional and is the most important thing to understand: **you change what's on the site by editing JSON files, not by editing code.**
+
+Other things used:
+- **ESLint** — automatically checks the code for mistakes
+- **Jest** — automated tests that check nothing is broken
+- Custom fonts (pixel-style, bold headline, handwriting-style, etc.) give the site its "scrapbook/zine" look — polaroid photo cards, pushpins, scrolling tickers, and a full-screen menu.
+
+---
+
+## 3. Getting the project running on your own computer
+
+You only need to do this once (per computer).
+
+### Step 1 — Install Node.js (the required tool)
+
+This project needs **Node.js** (version 18 or newer). `npm` (Node's package manager) comes bundled with it automatically, so you don't need to install that separately.
+
+**Check if you already have it:**
+
+```
+node -v
+npm -v
+```
+
+If you see version numbers (e.g. `v20.11.0`), you already have Node.js and can skip to Step 2. If you get a "command not found" error, follow the instructions below for your operating system.
+
+#### Windows
+
+1. Go to https://nodejs.org
+2. Download the **LTS** version (LTS = "Long Term Support" — the stable, recommended one, not the "Current" version)
+3. Run the downloaded `.msi` installer and click through it using all the default options
+4. Restart any open Command Prompt / PowerShell / terminal windows
+5. Confirm it worked by running `node -v` and `npm -v` in a new terminal window
+
+#### macOS
+
+**Option A — Direct installer (simplest):**
+1. Go to https://nodejs.org
+2. Download the **LTS** version's macOS installer (`.pkg`)
+3. Run it and click through the installer
+4. Confirm with `node -v` and `npm -v` in a new Terminal window
+
+**Option B — Using Homebrew (if you already use Homebrew):**
+```
+brew install node
+```
+
+#### Linux (Ubuntu/Debian)
+
+```
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+Then confirm with:
+```
+node -v
+npm -v
+```
+
+#### Recommended alternative for any OS — using `nvm` (Node Version Manager)
+
+If you think you might need to switch between Node versions later, or just want an easier way to manage installs/updates, use `nvm` instead of a direct installer:
+
+- **macOS/Linux:**
+  ```
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+  ```
+  Close and reopen your terminal, then run:
+  ```
+  nvm install --lts
+  nvm use --lts
+  ```
+
+- **Windows:** install `nvm-windows` from https://github.com/coreybutler/nvm-windows/releases, then run:
+  ```
+  nvm install lts
+  nvm use lts
+  ```
+
+Either method leaves you with working `node` and `npm` commands — use whichever feels easier.
+
+### Step 2 — Download the project
+
+```
+git clone https://github.com/tinkerhub-sngce/tinkerhub-web.git
+cd tinkerhub-web
+```
+
+### Step 3 — Install everything the project needs
+
+```
 npm install
+```
 
-# Run the development site
+This reads `package.json` and downloads all the required code libraries. It may take a minute or two — this is normal.
+
+### Step 4 — Start the site on your computer
+
+```
 npm run dev
-
-# Create a production build (run before deployment)
-npm run build
-
-# Start the production build locally
-npm start
-
-# Run unit tests
-npm test
 ```
 
-The development site runs at `http://localhost:3000` by default.
+Now open your browser and go to **http://localhost:3000** — you should see the live site running on your machine. Any change you make to a file will show up automatically after you save it.
 
-## Environment
+### Other useful commands
 
-Copy `.env.example` to `.env.local` when deploying or running with real SEO settings.
+| Command | What it does |
+|---|---|
+| `npm run dev` | Runs the site locally so you can preview changes |
+| `npm run build` | Builds the "real" production version of the site (always run this before deploying, to catch errors) |
+| `npm start` | Runs that production build locally |
+| `npm run lint` | Checks the code for style/quality issues |
+| `npm test` | Runs the automated tests |
 
-```env
-NEXT_PUBLIC_SITE_URL=https://your-domain.example
-NEXT_PUBLIC_GOOGLE_VERIFICATION=your-google-verification-token
+---
+
+## 4. How the project folders are organized
+
+You don't need to memorize this, just know where to look:
+
+```
+tinkerhub-web/
+├── app/            → The actual pages of the website (Home, Events, Resources, etc.)
+├── components/     → Reusable building blocks used across pages (buttons, cards, nav menu…)
+├── data/           → ⭐ THE CONTENT. Edit these JSON files to change what's on the site.
+├── hooks/          → Small reusable pieces of logic used by components
+├── public/images/  → All images and static files (team photos, icons, etc.)
+├── __tests__/      → Automated tests
+├── .env.example    → Template for environment/config settings
+└── HANDOVER.md     → A more technical handover doc already left by the previous maintainer
 ```
 
-## Content files
+**Rule of thumb:** if you're asked to "update an event" or "add a team member," you almost always go to the `data/` folder — not `app/` or `components/`.
 
-| File | Purpose |
-| --- | --- |
-| `data/events.json` | Current and upcoming events |
-| `data/previous_events.json` | Completed event archive, grouped by year |
-| `data/studyJams.json` | Study Jam tracks |
-| `data/links.json` | External form URLs and shared CTA links |
-| `data/campus_hub.json` | Current Campus Hub teams |
-| `data/previousCoreTeam.json` | Previous Core Team archive |
-| `data/successStories.json` | Success Stories page cards |
-| `data/spotlights.json` | Homepage / Spotlight page maker cards |
-| `data/resources.json` | Resource Hub content |
-| `data/stats.json` | Homepage statistics |
-| `data/pillars.json` | TinkerHub Paradigm cards |
-| `data/actionPlan.json` | Campus Action Plan cards and links |
+---
 
-Always keep JSON valid. An empty list must be written as `[]`, never as a blank file. `studyJams.json` is additionally protected by a safe API reader, so a temporary blank or malformed draft will display the empty state rather than crash the page.
+## 5. The most common task: updating website content
 
-## JSON structures
+This is what you'll be doing most often. All content lives as JSON files in the `data/` folder. JSON is just a structured text format — a list of items, each with labeled fields (like a spreadsheet, but written as text).
 
-### Current / upcoming events — `data/events.json`
+**Important rule:** JSON has strict formatting. A missing comma or bracket can break the whole page. If you're not confident editing JSON by hand, you can paste your file into a free tool like https://jsonlint.com before saving, to check it's valid. If a list has nothing in it, write `[]` — never leave the file completely empty.
 
-```json
-[
-  {
-    "id": "event-unique-id",
-    "status": "Upcoming",
-    "statusBadge": "📅 Upcoming Event",
-    "date": "AUG 07 • 1:20 PM",
-    "title": "Event name",
-    "location": "Venue • SNGCE",
-    "desc": "Short event description.",
-    "category": "Workshop",
-    "registrationUrl": "https://registration-link.example"
-  }
-]
-```
+Here are the main content files and what they control:
 
-Allowed status values are `Upcoming` and `Current` (capitalization is handled automatically). `registrationUrl` is used directly by the **Register** button, so use a complete `https://...` URL.
+| File | What it controls |
+|---|---|
+| `data/events.json` | Upcoming and current events |
+| `data/previous_events.json` | Archive of past/completed events |
+| `data/studyJams.json` | Active Study Jam learning tracks |
+| `data/resources.json` | The Resource Hub (guides, tools, links) |
+| `data/spotlights.json` | Student project highlights on the homepage/Spotlight page |
+| `data/coreTeam.json` / `data/campus_hub.json` | Current core team roster |
+| `data/previousCoreTeam.json` | Past team archive |
+| `data/successStories.json` | Success story cards |
+| `data/stats.json` | Homepage statistics (numbers shown) |
+| `data/pillars.json` | The four core pillars (Learn, Build, Share, Empower) |
+| `data/actionPlan.json` | Campus action plan steps |
+| `data/links.json` | Shared external links, like registration form URLs |
 
-### Completed events — `data/previous_events.json`
+### Example: Adding a new event
 
-```json
-[
-  {
-    "id": "past-event-unique-id",
-    "year": 2025,
-    "date": "MAR 11 • 9:30 AM",
-    "title": "Past event name",
-    "location": "Offline • SNGCE",
-    "desc": "Short event description.",
-    "category": "Competition",
-    "outcome": "54 participants",
-    "highlight": true
-  }
-]
-```
-
-`year` is required: the Events page groups completed events by this value.
-
-### Study Jams — `data/studyJams.json`
-
-```json
-[
-  {
-    "id": "track-unique-id",
-    "title": "Full Stack Web & Next.js",
-    "duration": "4 Weeks • Peer-to-Peer",
-    "desc": "Short track description.",
-    "level": "Beginner to Intermediate",
-    "status": "Registration Open"
-  }
-]
-```
-
-Use `[]` when no tracks are available. The Study Jam page will show the “Welcome to the void” image automatically.
-
-### Shared forms / CTA links — `data/links.json`
+Open `data/events.json`. You'll see a list of items that look like this:
 
 ```json
 {
-  "forms": {
-    "projectShowcase": "https://tally.so/r/your-project-form",
-    "mentorApplication": "https://tally.so/r/your-mentor-form",
-    "successStory": "https://tally.so/r/your-story-form"
-  }
+  "id": "event-unique-id",
+  "status": "Upcoming",
+  "statusBadge": "📅 Upcoming Event",
+  "date": "AUG 07 • 1:20 PM",
+  "title": "Event name",
+  "location": "Venue • SNGCE",
+  "desc": "Short event description.",
+  "category": "Workshop",
+  "registrationUrl": "https://registration-link.example"
 }
 ```
 
-The Project Proposal, Mentor Application, Success Story, and Action Plan mentor CTAs read from this file.
+To add a new event, copy one of these blocks, paste it into the list, give it a unique `id`, and fill in your own details. Save the file, and (if the dev server is running) you'll see it appear on the site right away.
 
-### Success stories — `data/successStories.json`
+A few things to double check:
+- `status` should be either `"Upcoming"` or `"Current"`
+- `registrationUrl` needs to be a full link starting with `https://`
+- Every item needs its own unique `id`
 
-```json
-[
-  {
-    "id": "story-unique-id",
-    "number": "01",
-    "category": "From curiosity to code",
-    "title": "Story headline",
-    "story": "Story body text.",
-    "highlight": "Short pull quote.",
-    "accent": "var(--lime)",
-    "emoji": "💻"
-  }
-]
-```
+The same copy-paste-and-edit approach works for every other file in `data/` — just follow the pattern of the existing entries.
 
-Use CSS colour variables for `accent`: `var(--lime)`, `var(--pink)`, or `var(--lavender)`.
+### Example: Updating the team
 
-### Team archives — `data/campus_hub.json` and `data/previousCoreTeam.json`
-
-Each member uses this shape:
+`data/coreTeam.json` and `data/campus_hub.json` hold team member info, in this shape:
 
 ```json
 {
@@ -162,40 +239,79 @@ Each member uses this shape:
 }
 ```
 
-For an earlier core team, update `year`, `label`, `eyebrow`, `color`, and the `members` array in `data/previousCoreTeam.json`.
+If a member's photo file doesn't exist yet, don't worry — the site automatically shows a nice colour gradient instead of a broken image.
 
-## Images and branding assets
+### Where do images go?
 
-- Public images are under `public/images/` and are referenced as `/images/...` in JSON.
-- The favicon is `app/icon.jpg`.
-- The empty-state image is `public/images/empty-states/welcome-to-the-void.png`.
-- If an image does not exist, team and spotlight cards use a gradient fallback instead of showing a broken image.
+Put image files inside `public/images/` (there's usually a subfolder like `public/images/team/`). Then reference them in the JSON as `/images/your-file-name.jpg`.
 
-## Adding a page
+---
 
-1. Create `app/<route>/page.tsx`.
-2. Use `PageShell`, `PageHeader`, and `BackHomeLink` for consistent navigation, footer, and styling.
-3. Add the route to `components/NavOverlay.tsx`, `components/Footer.tsx`, and `app/sitemap.ts` when it should be publicly discoverable.
-4. Prefer a component in `components/` plus JSON data in `data/` for repeatable card-based content.
-5. Run `npm run build` before publishing.
+## 6. Adding a whole new page (a bit more advanced)
 
-## Design conventions
+Only do this if you actually need a brand-new section (not just new content in an existing section).
 
-- Global CSS is in `app/globals.css`.
-- Shared colour variables are defined at the top of that file.
-- The display pixel font is exposed as `var(--font-pixel)`; it uses Pixelify Sans for clear lowercase glyphs.
-- Reuse `.btn`, `.btn--solid`, `.btn--outline`, `.page-actions`, `.pillar-card`, and `.event-card` instead of adding one-off button/card styles.
+1. Create a new folder in `app/`, e.g. `app/new-page/`, and inside it a `page.tsx` file.
+2. Reuse the existing `PageShell`, `PageHeader`, and `BackHomeLink` components so the new page matches the site's look and navigation — you don't need to build these from scratch.
+3. If the page should appear in the main menu, add a link to it in `components/NavOverlay.tsx` and `components/Footer.tsx`, and also add it to `app/sitemap.ts` (so search engines can find it).
+4. If the page shows a list of repeatable items (cards), prefer creating a data file in `data/` plus a small component in `components/`, rather than hardcoding content into the page.
+5. Always run `npm run build` afterward to make sure nothing is broken.
 
-## Deployment checklist
+---
 
-```bash
-npm install
-npm run build
+## 7. Visual style — keeping things consistent
+
+The site has a deliberate "scrapbook/zine" look — pixel fonts, bold headlines, handwriting-style accents, polaroid-style cards, pushpins. To keep new additions consistent:
+
+- All shared colours are defined near the top of `app/globals.css` — reuse them instead of inventing new colours.
+- Reuse existing CSS classes like `.btn`, `.btn--solid`, `.btn--outline`, `.pillar-card`, and `.event-card` instead of writing new one-off styles for buttons and cards.
+- The main pixel-style display font is available as `var(--font-pixel)`.
+
+---
+
+## 8. Environment settings (for deployment)
+
+There's a file called `.env.example` that lists the settings the site expects. When deploying (or if you want production-like SEO behavior locally), copy it to a new file called `.env.local` and fill in the real values:
+
+```
+NEXT_PUBLIC_SITE_URL=https://your-real-domain.example
+NEXT_PUBLIC_GOOGLE_VERIFICATION=your-google-verification-token
 ```
 
-Before publishing, verify:
+`.env.local` is intentionally left out of the code repository (via `.gitignore`) since it can contain deployment-specific settings — this is normal and expected.
 
-- All external registration and form URLs work.
-- `NEXT_PUBLIC_SITE_URL` matches the deployed domain.
-- All content JSON files are valid JSON.
-- New public pages are included in the sitemap and navigation if appropriate.
+---
+
+## 9. Publishing changes (deployment)
+
+The live site is hosted on **Vercel** (visible from the "About" section of the GitHub repo: tinkerhub-web.vercel.app). Vercel typically rebuilds and republishes the site automatically whenever changes are pushed to the `main` branch on GitHub.
+
+Before pushing changes that should go live, always:
+
+1. Run `npm install` (in case dependencies changed)
+2. Run `npm run build` — this catches errors before they reach the live site
+3. Double-check that any external links (registration forms, socials) actually work
+4. Make sure every JSON file you touched is still valid (no missing commas/brackets)
+5. If you added a new public page, confirm it's linked in the navigation and sitemap
+
+---
+
+## 10. If you want to contribute a code change (not just content)
+
+1. Create your own branch: `git checkout -b feature/your-feature-name`
+2. Make your changes
+3. Commit them: `git commit -m "Describe what you changed"`
+4. Push the branch: `git push origin feature/your-feature-name`
+5. Open a Pull Request on GitHub so it can be reviewed before merging into `main`
+
+---
+
+## 11. Where to go if you're stuck
+
+- The repository already includes a more technical `HANDOVER.md` file with exact JSON schemas for every data file — treat this guide as the "plain language" companion to that one.
+- TinkerHub SNGCE's community channels (WhatsApp/Discord, linked from the site itself) are the best place to ask the previous core team or other student contributors for help.
+- For anything code-related that feels intimidating: start small. Editing a JSON file in `data/` is a safe, low-risk way to get comfortable with the project before touching any actual code in `app/` or `components/`.
+
+---
+
+*This guide is meant to get a new maintainer productive quickly, without needing deep prior knowledge of Next.js or React. When in doubt: content changes go in `data/`, page changes go in `app/`, and reusable pieces go in `components/`.*
