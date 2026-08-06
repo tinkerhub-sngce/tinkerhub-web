@@ -52,6 +52,41 @@
         "url": "https://github.com/rust-lang/rust-by-example",
         "desc": "Learn Rust with examples (Live code editor included)",
         "tag": "Github • Learning"
+      },
+      {
+        "id": "cs-8",
+        "title": "TryHackMe — Penetration Testing",
+        "url": "https://tryhackme.com/",
+        "desc": "Learn penetration testing with hands-on labs and real-world scenarios.",
+        "tag": "Learning • Penetration Testing"
+      },
+      {
+        "id": "cs-9",
+        "title": "MIT — The Missing Semester",
+        "url": "https://missing.csail.mit.edu/",
+        "desc": "MIT course covering practical developer tools including the shell, Git, editors, debugging, profiling, and automation.",
+        "tag": "Free • Developer Tools"
+      },
+      {
+        "id": "cs-10",
+        "title": "roadmap.sh",
+        "url": "https://roadmap.sh/",
+        "desc": "Community-driven learning roadmaps for backend, frontend, DevOps, cybersecurity, databases, and other developer paths.",
+        "tag": "Free • Roadmaps"
+      },
+      {
+        "id": "cs-11",
+        "title": "Docker — Get Started",
+        "url": "https://docs.docker.com/get-started/",
+        "desc": "Official beginner-friendly guides for learning containers, images, Dockerfiles, networking, and application deployment.",
+        "tag": "Docs • DevOps"
+      },
+      {
+        "id": "cs-12",
+        "title": "SQLBolt",
+        "url": "https://sqlbolt.com/",
+        "desc": "Interactive browser-based lessons and exercises for learning SQL queries, relational databases, joins, and data manipulation.",
+        "tag": "Free • Databases"
       }
     ]
   },
@@ -101,6 +136,48 @@
         "url": "https://www.hackster.io/",
         "desc": "Thousands of hardware project tutorials from the maker community — Arduino, Raspberry Pi, and more.",
         "tag": "Projects • Community"
+      },
+      {
+        "id": "ece-7",
+        "title": "KiCad",
+        "url": "https://www.kicad.org/",
+        "desc": "Free and open-source tool for schematic capture, PCB design, circuit boards, and electronics prototyping.",
+        "tag": "Free • PCB Design"
+      },
+      {
+        "id": "ece-8",
+        "title": "LTspice",
+        "url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
+        "desc": "Free SPICE-based circuit simulator for designing and analyzing analog and power electronic circuits.",
+        "tag": "Free • Simulation"
+      },
+      {
+        "id": "ece-9",
+        "title": "STM32 Learning Resources",
+        "url": "https://www.st.com/content/st_com/en/support/learning/stm32-education.html",
+        "desc": "Official STM32 learning resources covering microcontrollers, embedded development, peripherals, and real-time systems.",
+        "tag": "Free • Embedded"
+      },
+      {
+        "id": "ece-10",
+        "title": "Texas Instruments Training",
+        "url": "https://www.ti.com/video/series/ti-precision-labs.html",
+        "desc": "Technical training on analog electronics, op-amps, ADCs, power electronics, sensors, and signal-chain design.",
+        "tag": "Free • Electronics"
+      },
+      {
+        "id": "ece-11",
+        "title": "HDLBits",
+        "url": "https://hdlbits.01xz.net/wiki/Main_Page",
+        "desc": "Interactive Verilog exercises for learning digital logic, HDL design, finite-state machines, and FPGA fundamentals.",
+        "tag": "Free • Verilog"
+      },
+      {
+        "id": "ece-12",
+        "title": "GNU Radio",
+        "url": "https://www.gnuradio.org/",
+        "desc": "Open-source toolkit for learning software-defined radio, wireless communication, and digital signal processing.",
+        "tag": "Free • Communication"
       }
     ]
   },
@@ -164,6 +241,34 @@
         "url": "https://www.databricks.com/learn/training/home",
         "desc": "Build a strong data and AI foundation with Databricks training and certification to demonstrate your competence and accelerate your career",
         "tag": "Free • Certification"
+      },
+      {
+        "id": "ai-9",
+        "title": "PyTorch Tutorials",
+        "url": "https://docs.pytorch.org/tutorials/",
+        "desc": "Official tutorials for learning PyTorch, from tensors and neural networks to computer vision and advanced deep learning workflows.",
+        "tag": "Free • PyTorch"
+      },
+      {
+        "id": "ai-10",
+        "title": "scikit-learn — User Guide",
+        "url": "https://scikit-learn.org/stable/user_guide.html",
+        "desc": "Official guide to classical machine learning with regression, classification, clustering, preprocessing, and model evaluation.",
+        "tag": "Docs • Machine Learning"
+      },
+      {
+        "id": "ai-11",
+        "title": "Made With ML",
+        "url": "https://madewithml.com/",
+        "desc": "Practical resource for learning how to design, train, evaluate, deploy, and maintain production machine learning systems.",
+        "tag": "Free • MLOps"
+      },
+      {
+        "id": "ai-12",
+        "title": "Dive into Deep Learning",
+        "url": "https://d2l.ai/",
+        "desc": "Interactive deep learning textbook combining mathematical foundations, code, and implementations of modern neural networks.",
+        "tag": "Free • Deep Learning"
       }
     ]
   }
