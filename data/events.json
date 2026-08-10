@@ -1,3 +1,13 @@
 [
-
+    {
+      "id": "event-1",
+      "status": "Upcoming",
+      "statusBadge": "📅 Upcoming Event",
+      "date": "TBD",
+      "title": "Adicch Keri Vaa",
+      "location": "SNGCAST room• SNGCE",
+      "desc": "Just a normal Community Meetup",
+      "category": "Community Building",
+      "registrationUrl": ""
+    }
 ]
