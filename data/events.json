@@ -9,5 +9,16 @@
       "desc": "Curious about what TinkerHub is? Wondering what we do, the events we host, or how you can be a part of it? Drop by for an open conversation with the TinkerHub team.No formal sessions. Just people, conversations, ideas, and a chance to connect with fellow students who love learning, building, and exploring new things. Whether you're hearing about TinkerHub for the first time or already know a little about us, you're welcome to join the conversation.",
       "category": "Community Building",
       "registrationUrl": "https://tinkerhub.org/events/OVKPQ5IXI4/adich-keri-va"
+    },
+    {
+      "id": "event-2",
+      "status": "Upcoming",
+      "statusBadge": "📅 Upcoming Event",
+      "date": "AUG 17 • 1:30 PM",
+      "title": "Tinkerhub Orientatio 2026-27",
+      "location": "Chempazhanthy Hall [SH5 Hall]• SNGCE",
+      "desc": "Introduction of Tinkerhub to first Years",
+      "category": "Community Building",
+      "registrationUrl": ""
     }
 ]
