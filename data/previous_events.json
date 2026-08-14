@@ -152,5 +152,16 @@
     "category": "Community",
     "outcome": "12 participants",
     "highlight": false
+  },
+  {
+    "id": "event-15",
+    "year": 2026,
+    "date": "AUG 14 • 2:10 PM",
+    "title": "Adicch Keri Vaa",
+    "location": "Sivagiri Hall [PG Seminar Hall]• SNGCE",
+    "desc": "Curious about what TinkerHub is? Wondering what we do, the events we host, or how you can be a part of it? Drop by for an open conversation with the TinkerHub team.No formal sessions. Just people, conversations, ideas, and a chance to connect with fellow students who love learning, building, and exploring new things. Whether you're hearing about TinkerHub for the first time or already know a little about us, you're welcome to join the conversation.",
+    "category": "Community Building",
+    "outcome": "57 participants",
+    "highlight": true
   }
 ]
