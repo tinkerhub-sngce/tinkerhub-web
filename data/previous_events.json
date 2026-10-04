@@ -163,5 +163,27 @@
     "category": "Community Building",
     "outcome": "57 participants",
     "highlight": true
+  },
+  {
+    "id": "event-16",
+    "year":2026,
+    "date": "AUG 17 • 1:30 PM",
+    "title": "Tinkerhub Orientatio 2026-27",
+    "location": "Chempazhanthy Hall [SH5 Hall]• SNGCE",
+    "desc": "Introduction of Tinkerhub to first Years",
+    "category": "Community Building",
+    "outcome": " Whole First Years",
+    "highlight":false
+  },
+  {
+    "id": "event-17",
+    "year": 2026,
+    "date": "SEP 11 • 4:00 PM",
+    "title": "Useless Projects Hackathon",
+    "location": "MCA Coding Lab",
+    "desc": " building the most useless stuff",
+    "category": "Hackathon",
+    "outcome": "47 participants • Overnight",
+    "highlight": true
   }
 ]

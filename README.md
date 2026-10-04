@@ -195,7 +195,7 @@ Site content is decoupled from components and stored as JSON files inside the [`
 - [x] Study Jam tracks & Resource Hub implementation
 - [x] WhatsApp & Discord community hubs integration
 - [ ] Direct project submission portal for Student Spotlights
-- [ ] Interactive event calendar & reminder subscriptions
+- [ ] Interactive event calendar & reminder 
 
 ---
 
